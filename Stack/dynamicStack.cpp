@@ -8,9 +8,9 @@ struct Node {
 
 Node* top = nullptr;
 
-void push(int value) {
+void push(int val) {
     Node* newNode = new Node();
-    newNode->data = value;
+    newNode->data = val;
     newNode->next = top;
     top = newNode;
 }
@@ -48,7 +48,7 @@ void traverse() {
 
 
 int main() {
-    int choice, value;
+    int ch, value;
     do {
         cout << "1. Push" << endl;
         cout << "2. Pop" << endl;
@@ -56,9 +56,9 @@ int main() {
         cout << "4. Traverse" << endl;
         cout << "5. Exit" << endl;
         cout << "Enter your choice: ";
-        cin >> choice;
+        cin >> ch;
 
-        switch (choice) {
+        switch (ch) {
             case 1:
                 cout << "Enter value to push: ";
                 cin >> value;
@@ -79,7 +79,7 @@ int main() {
             default:
                 cout << "Invalid choice. Please try again." << endl;
         }
-    } while (choice != 5);  
+    } while (ch != 5);  
     
     return 0;
 }
